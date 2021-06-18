@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+// Displas nav component.
 const Nav = () => {
-
     return (
         <nav className="main-nav">
             <ul>

@@ -15,7 +15,7 @@ class Birds extends Component {
         let results = this.props.data
         return (
             <>
-                {this.props.loading ? <h2>Loading...</h2> : <PhotoContainer data={results} />}
+                {this.props.loading ? <h3>' Page Loading...'</h3> : <PhotoContainer data={results} />}
             </>
         );
 

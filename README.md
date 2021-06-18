@@ -1,3 +1,12 @@
+# React Gallery app
+CSS changes made.
+1. All custom CSS was added at the end of index.css for easy removal.
+* Changed background color.
+* Change input background and text color
+* Added a gallery png picture as header.
+* Added border, border radius, and shadow to the pictures.
+
+-----------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

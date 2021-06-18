@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
 
-// this class recieves the fetchImageResult funciton from app.js as a property 'onSearch'
+// This class recieves the fetchImageResult funciton from app.js as a property 'onSearch'
 class SearchForm extends Component {
     constructor(){
         super();
@@ -16,7 +16,7 @@ class SearchForm extends Component {
         });
     }
 
-    // uses the onSearch prop and pass the query text to be search
+    // uses the onSearch prop and pass the query text to be search. returns the results to be display in PhotoContainer.
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.onSearch(this.query.value);
@@ -25,6 +25,7 @@ class SearchForm extends Component {
         
     }
 
+    // renders the form and pass the handleSubmit function.
     render(){
     return(
         <form className="search-form" onSubmit={this.handleSubmit}>
