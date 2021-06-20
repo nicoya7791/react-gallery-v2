@@ -1,15 +1,15 @@
 import React from  'react';
-import NotFound from './NotFound';
 import Photo from './Photo';
+import SearchNotFound from './SearchNotFound';
 
 
-// Recieve an object data property from app.js. will map throuh the data. return Photo component.
+// Recieve an object data property from Search.js. will map through the data. return Photo component.
 const PhotoContainer = (props) => {
    const results = props.data;
+   //const searchNotFound = 'page not found'
     let photos;
-    (results.length) > 0 ? photos = results.map(photo => <Photo url={photo.url_z} key={photo.id} />) 
-        : photos = <NotFound /> 
-
+    (results.length) > 0 ? photos = results.map(photo => <Photo url={photo.url_q} key={photo.id} />) 
+        : photos = <SearchNotFound />
 
     return (
         <div className="photo-container">
@@ -17,8 +17,7 @@ const PhotoContainer = (props) => {
             <ul>
                 {photos} 
             </ul>
-
-        </div>
+        </div> 
 
     );;
 }
