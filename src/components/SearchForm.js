@@ -19,8 +19,8 @@ class SearchForm extends Component {
     // uses the onSearch prop and pass the query text to be search. returns the results to be display in PhotoContainer.
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.onSearch(this.query.value);
-        this.props.history.push(`/search/${this.query.value}`);
+        this.props.history.push(`/search/${this.state.searchQuery}`);
+        this.props.fetch(this.state.searchQuery);
         e.currentTarget.reset();
         
     }
@@ -35,7 +35,7 @@ class SearchForm extends Component {
             placeholder="search" 
             onChange={this.onSearchChangeValue} 
             required
-            ref={(input)=> this.query=input}
+            //ref={(input)=> this.query=input}
             className='input-class'
                  />
             <button type="submit" className="search-button" > 

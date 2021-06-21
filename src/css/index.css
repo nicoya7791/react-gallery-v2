@@ -148,7 +148,7 @@ body {
 }
 
 .photo-container li:hover img {
-  transform: scale(1.65);
+  transform: scale(1.3);
 
 
 }

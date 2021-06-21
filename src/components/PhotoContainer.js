@@ -6,6 +6,7 @@ import SearchNotFound from './SearchNotFound';
 // Recieve an object data property from Search.js. will map through the data. return Photo component.
 const PhotoContainer = (props) => {
    const results = props.data;
+   let topic = props.topic;
    //const searchNotFound = 'page not found'
     let photos;
     (results.length) > 0 ? photos = results.map(photo => <Photo url={photo.url_q} key={photo.id} />) 
@@ -13,7 +14,7 @@ const PhotoContainer = (props) => {
 
     return (
         <div className="photo-container">
-            <h2>Results</h2>
+            <h2>Results for: {topic}</h2>
             <ul>
                 {photos} 
             </ul>

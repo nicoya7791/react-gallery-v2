@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import apikey from '../config';
 import PhotoContainer from './PhotoContainer';
-import logo from '../galleries.png';
-import SearchForm from './SearchForm';
-import Nav from './Nav';
 
 class Search extends Component {
     constructor(props){
         super(props);
         this.state = {
             results: [],
-            loading: true
+            loading: true,
+            query: ''
         }
     }
 
@@ -35,20 +33,20 @@ class Search extends Component {
           .then(response => {
             this.setState({
               results: response.data.photos.photo,
-              loading: false
+              loading: false,
+              query: query
             });
           })
           .catch(error => console.log('error fetching data', error));
       }
     
-      // rendeers the page components and displays the gallery
+      // renders the page components and displays the gallery
     render(){
+        let result = this.state.results
+        let topic= this.props.match.params.query;
         return(
             <>
-                <img src={logo} className='logo-class' alt='Logo' />
-                <SearchForm onSearch={this.fetchImagesResults} />
-                <Nav />
-                {this.state.loading ? <h2>Loading...</h2> :  <PhotoContainer data={this.state.results} />}
+                {this.state.loading ? <h2>Loading...</h2> :  <PhotoContainer topic={topic} data={result} />}
             </>
 
         );
