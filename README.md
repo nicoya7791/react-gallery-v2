@@ -6,7 +6,25 @@ CSS changes made.
 * Added a gallery png picture as header.
 * Added border, border radius, and shadow to the pictures.
 
------------------------------------------------------------------------------------------------------
+## How to run this application
+1. Install the project dependacy with npm install
+2. You need to sign up for Flickr account and request a non commercial api key at https://www.flickr.com/services/apps/create/apply/
+3. Create a config.js file and store your api key there: see code example below.
+    const apiKey = 'YOUR API KEY';
+    export default apiKey
+4. to keep your api key private make sure the config.js file is listed in the gitignore file.
+5. run npm start to run the project
+
+### This project uses
+* HTML
+* CSS
+* JAVASCRIPT
+* JSX
+* REACT LIBRARY
+
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
